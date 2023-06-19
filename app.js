@@ -1,10 +1,10 @@
 'use strict';
 
-var SwaggerConnect = require('swagger-connect');
-var app = require('connect')();
+let SwaggerConnect = require('swagger-connect');
+let app = require('connect')();
 module.exports = app; // for testing
 
-var config = {
+let config = {
   appRoot: __dirname // required config
 };
 
