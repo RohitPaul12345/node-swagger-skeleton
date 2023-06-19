@@ -1,10 +1,10 @@
 'use strict';
 
-var SwaggerConnect = require('swagger-connect');
-var app = require('connect')();
+let SwaggerConnect = require('swagger-connect');
+let app = require('connect')();
 module.exports = app; // for testing
 
-var config = {
+let config = {
   appRoot: __dirname // required config
 };
 
@@ -14,7 +14,7 @@ SwaggerConnect.create(config, function(err, swaggerConnect) {
   // install middleware
   swaggerConnect.register(app);
 
-  var port = process.env.PORT || 10010;
+  let port = process.env.PORT || 10010;
   app.listen(port);
 
   if (swaggerConnect.runner.swagger.paths['/hello']) {
